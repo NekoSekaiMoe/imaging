@@ -1,4 +1,4 @@
-module github.com/boxes-ltd/imaging
+module github.com/NekoSekaiMoe/imaging
 
 go 1.25.0
 
