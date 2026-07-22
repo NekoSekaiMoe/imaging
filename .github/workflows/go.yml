@@ -15,21 +15,20 @@ env:
 
 jobs:
   go-build:
-    runs-on: [ self-hosted, Linux, Docker ]
-    container: golang:1.24-bookworm
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./go
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           path: 'go'
           fetch-depth: '2'
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
-          go-version: '1.24.0'
+          go-version: '1.26.5'
           cache: true
           cache-dependency-path: |
             **/go.sum
